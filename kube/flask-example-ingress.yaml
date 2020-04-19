@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: flask-example-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/default-backend: flask-example-service
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+spec:
+  tls:
+  - hosts:
+    - localhost
+    secretName: flask-example-tls 
+  rules:
+    - host: localhost
+      http:
+        paths:
+        - path: /
+          backend:
+            serviceName: flask-example-service
+            servicePort: 5555
+
+
