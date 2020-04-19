@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: flask-example
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask-example
+    spec:
+      containers:
+      - name: flask-example
+        image: atoserik/flask-kube-example:http
+        ports:
+        - containerPort: 5555
