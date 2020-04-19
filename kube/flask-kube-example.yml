@@ -5,6 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/default-backend: flask-example-service
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   rules:
     - host: localhost
@@ -43,6 +44,6 @@ spec:
     spec:
       containers:
       - name: flask-example
-        image: atoserik/flask-kube-example:http
+        image: atoserik/flask-kube-example:https
         ports:
         - containerPort: 5555
