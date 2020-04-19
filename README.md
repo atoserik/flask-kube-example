@@ -7,9 +7,9 @@ More in details the interesting objective of the repo is to expose a flask servi
 To have a bettere understanding there are more branch available each one with a different configuration implemented:
 - [http](https://github.com/atoserik/flask-kube-example/tree/http): the flask expose a simple http service, and this is exposed with a LoadBalancer service
 - [https](https://github.com/atoserik/flask-kube-example/tree/https): the flask expose a http over tls service, and this is exposed with a LoadBalancer service
-- http-ingress: the flask expose a simple http service, and this is exposed with an ingress
-- https-ingress: the flask expose a http over tls service, and this is exposed with an ingress
-- http-ingress-tls: the flask expose a simple http service, and this is exposed with an ingress that accept ciphred over tls connection
+- [http-ingress](https://github.com/atoserik/flask-kube-example/tree/http-ingress): the flask expose a simple http service, and this is exposed with an ingress
+- [https-ingress](https://github.com/atoserik/flask-kube-example/tree/https-ingress): the flask expose a http over tls service, and this is exposed with an ingress
+- [http-ingress-tls](https://github.com/atoserik/flask-kube-example/tree/http-ingress-tls): the flask expose a simple http service, and this is exposed with an ingress that accept ciphred over tls connection
 
 For each branch a different README will give more detail about the implemented solution. 
 
