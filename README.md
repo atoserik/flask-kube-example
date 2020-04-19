@@ -5,8 +5,8 @@ This repo aims to summarize the configuration needed to deploy a **flask** appli
 More in details the interesting objective of the repo is to expose a flask service with a secured connection with TLS, this can be obtained in multiple ways depending on where the connection need to be deciphered. 
 
 To have a bettere understanding there are more branch available each one with a different configuration implemented:
-- http: the flask expose a simple http service, and this is exposed with a ClusterIp service
-- https: the flask expose a http over tls service, and this is exposed with a ClusterIp service
+- [http](https://github.com/atoserik/flask-kube-example/tree/http): the flask expose a simple http service, and this is exposed with a LoadBalancer service
+- [https](https://github.com/atoserik/flask-kube-example/tree/https): the flask expose a http over tls service, and this is exposed with a LoadBalancer service
 - http-ingress: the flask expose a simple http service, and this is exposed with an ingress
 - https-ingress: the flask expose a http over tls service, and this is exposed with an ingress
 - http-ingress-tls: the flask expose a simple http service, and this is exposed with an ingress that accept ciphred over tls connection
