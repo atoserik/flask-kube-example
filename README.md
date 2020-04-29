@@ -8,6 +8,8 @@ The app is dockerized with the Dockerfile contained in the Docker directory with
     
     docker build -f ../docker/Dockerfile -t atoserik/flask-kube-example:http .
 
-The Kubernetes cluster run the image as a deployment, as described in the `-deployment.yaml` file contained in the kube directory.  
+The Kubernetes cluster run the image as a deployment, as described in the `-deployment.yaml` file contained in the kube folder.  
 
-This is finally exposed externally with a LoadBalancer service, to make more clear what is going on the service is exposed on a different port than the one exposed from the pods.
+This is finally exposed externally with a LoadBalancer service as described in the `-service.yaml` file contained in the kube folder.
+
+To enphazise what is going on the service is exposed on a different port than the one exposed from the pods.
