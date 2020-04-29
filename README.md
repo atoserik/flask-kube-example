@@ -14,11 +14,12 @@ To have a better understanding there are more branches available each one with a
 
 For each branch a different README will give more details about the implemented solution. 
 
-Moving from the `http` branch to the `https-ingress-tls` one in the exposed order is useful to perform all the steps. 
-To have a quick reference the key steps are summarized:
+To be sure not to miss any step, my suggestion is to follow the docs of all the branches following the order above, starting with the `http` branch to the `https-ingress-tls` one.
+
+On the other side, to have a quick idea, these are the key steps:
 
   * A simple flask (without tls) is implemented
-  * Is dockerized with `docker build -f ../docker/Dockerfile -t atoserik/flask-kube-example:http .`
+  * It is dockerized with `docker build -f ../docker/Dockerfile -t atoserik/flask-kube-example:http .`
   * A couple of key/cert is created with `openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365`
   * The key/cert is used in the flask app adding the proper `ssl_context()`
   * The new version of the app is dockerized `docker build -f ../docker/Dockerfile -t atoserik/flask-kube-example:https .`
@@ -27,4 +28,4 @@ To have a quick reference the key steps are summarized:
 
 Any contribute or feedback is appreciated. 
 
-Hope this will be useful for those who are approaching to deploy some simple applications in a non-production environment. 
+Hope this will be useful for those who are approaching to deploy some simple applications in a **non-production** environment. 
