@@ -4,17 +4,18 @@ This repo aims at summarizing the configuration needed to deploy a **flask** app
 
 More in details the interesting objective of the repo is to explore the different implementations to expose a flask service with or without a secured connection with TLS.
 
-To have a bettere understanding there are more branch available each one with a different configuration implemented:
-- [http](https://github.com/atoserik/flask-kube-example/tree/http): the flask expose a simple http service, and this is exposed with a LoadBalancer service
-- [https](https://github.com/atoserik/flask-kube-example/tree/https): the flask expose a http over tls service, and this is exposed with a LoadBalancer service
-- [http-ingress](https://github.com/atoserik/flask-kube-example/tree/http-ingress): the flask expose a simple http service, and this is exposed with an ingress
-- [https-ingress](https://github.com/atoserik/flask-kube-example/tree/https-ingress): the flask expose a http over tls service, and this is exposed with an ingress
-- [http-ingress-tls](https://github.com/atoserik/flask-kube-example/tree/http-ingress-tls): the flask expose a simple http service, and this is exposed with an ingress that accept ciphred over tls connection
-- [https-ingress-tls](https://github.com/atoserik/flask-kube-example/tree/https-ingress-tls): the flask expose a https service, and this is exposed with an ingress that accept ciphred over tls connection
+To have a better understanding there are more branches available each one with a different configuration implemented:
+- [http](https://github.com/atoserik/flask-kube-example/tree/http): the flask exposes a simple http service, and this is exposed with a LoadBalancer service
+- [https](https://github.com/atoserik/flask-kube-example/tree/https): the flask exposes a http over tls service, and this is exposed with a LoadBalancer service
+- [http-ingress](https://github.com/atoserik/flask-kube-example/tree/http-ingress): the flask exposes a simple http service, and this is exposed with an ingress
+- [https-ingress](https://github.com/atoserik/flask-kube-example/tree/https-ingress): the flask exposes a http over tls service, and this is exposed with an ingress
+- [http-ingress-tls](https://github.com/atoserik/flask-kube-example/tree/http-ingress-tls): the flask exposes a simple http service, and this is exposed with an ingress that accept ciphred over tls connection
+- [https-ingress-tls](https://github.com/atoserik/flask-kube-example/tree/https-ingress-tls): the flask exposes a https service, and this is exposed with an ingress that accept ciphred over tls connection
 
-For each branch a different README will give more detail about the implemented solution. 
+For each branch a different README will give more details about the implemented solution. 
 
-Moving from the `http` branch to the `https-ingress-tls` one in the exposed order is useful to perform all the steps, to have a quick reference the key steps are summarized:
+Moving from the `http` branch to the `https-ingress-tls` one in the exposed order is useful to perform all the steps. 
+To have a quick reference the key steps are summarized:
 
   * A simple flask (without tls) is implemented
   * Is dockerized with `docker build -f ../docker/Dockerfile -t atoserik/flask-kube-example:http .`
