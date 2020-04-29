@@ -8,6 +8,6 @@ This implementation is obtained creating the couple of key/cert file with the co
     
 And defining a secret that refers the key.pem and the cert.pem files with the command:
 
-    kubectl create secret tls flask-example-tls --key app/key.pem --cert app/cert.pem
+    kubectl create secret tls flask-example-tls --key <path>/key.pem --cert <path>/cert.pem
 
 Then the secret is mentioned in the `-ingress.yaml` file. 
