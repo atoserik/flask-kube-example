@@ -12,4 +12,4 @@ The Kubernetes cluster run the image as a deployment, as described in the `-depl
 
 This is finally exposed externally with a LoadBalancer service as described in the `-service.yaml` file contained in the kube folder.
 
-To enphazise what is going on the service is exposed on a different port than the one exposed from the pods.
+To emphasize what is going on the service is exposed on a different port than the one exposed from the pods.
