@@ -1,8 +1,8 @@
 # flask-kube-example
 
-This repo aims to summarize the configuration needed to deploy a **flask** application in a docker container and then orchestrated with a **kubernetes** cluster. 
+This repo aims at summarizing the configuration needed to deploy a **flask** application in a docker container and then run it with a **kubernetes** cluster.
 
-More in details the interesting objective of the repo is to exploit the different implementation that can expose a flask service with a secured connection with TLS.
+More in details the interesting objective of the repo is to explore the different implementations to expose a flask service with or without a secured connection with TLS.
 
 To have a bettere understanding there are more branch available each one with a different configuration implemented:
 - [http](https://github.com/atoserik/flask-kube-example/tree/http): the flask expose a simple http service, and this is exposed with a LoadBalancer service
