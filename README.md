@@ -1,13 +1,14 @@
 # Https branch
 
-This is the first solution, that implement a ciphred connection.
+This is a solution that implement a ciphred connection.
 
-In this case the flask app expose an **https** service, to do that the `ssl_context=('cert.pem', 'key.pem')` is added in the `app.run()` method. 
+The first step is to create the couple of key/cert files:
 
-The files `*.pem` are generated with a simple openssl command: 
-```openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365```
+    openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365    
 
-The app is dockerized with the same Dockerfile contained in the Docker directory with a different tag: `https`; and deployed on the kubernetes cluster as a deployment.
+Then the flask app is modified to expose an **https** service; to do that the `ssl_context=('cert.pem', 'key.pem')` is added in the `app.run()` method. 
 
-This is finally exposed externally with a LoadBalancer service, to make more clear what is going on the service is exposed on a different port than the one exposed from the pods.
+Finally the app is dockerized with the same Dockerfile contained in the Docker directory, but with a different tag: `https`; and deployed on the kubernetes cluster as a deployment.
+
+The service is exposed externally with a LoadBalancer service as in the `http` branch.
 
