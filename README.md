@@ -23,7 +23,7 @@ On the other side, to have a quick idea, these are the key steps:
   * A couple of key/cert is created with `openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365`
   * The key/cert is used in the flask app adding the proper `ssl_context()`
   * The new version of the app is dockerized `docker build -f ../docker/Dockerfile -t atoserik/flask-kube-example:https .`
-  * As ingress, I've choosen the nginx one. To deploy the same on your cluster follow [this guide](https://kubernetes.github.io/ingress-nginx/deploy/)
+  * As ingress, I've choosen the nginx one. To deploy the nginx ingress-controller on your cluster follow [this guide](https://kubernetes.github.io/ingress-nginx/deploy/)
   * To better manage the ingress and to go deeper in the annotations of the nginx ingress [this repo](https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md) is what you are looking for. 
 
 Any contribute or feedback is appreciated. 
